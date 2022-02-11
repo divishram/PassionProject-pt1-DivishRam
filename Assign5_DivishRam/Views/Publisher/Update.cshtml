@@ -1,0 +1,27 @@
+@model BlogProject.Models.Publishers
+
+@{
+    ViewBag.Title = "Update";
+}
+
+
+<header>
+    <a href="/Publishers/Show/@Model.Id">Go Back</a>
+</header>
+
+<h3>Update Publisher</h3>
+
+<form action="/Publishers/Update/@Model.Id" method="post" onsubmit="return ValidatePublishers()">
+
+    <label>Name: </label>
+    <input type="text" value="@Model.PublisherName" />
+
+    <label>Founder</label>
+    <input type="text" value="@Model.Founder" />
+
+    <label>Country </label>
+    <input type="text" value="@Model.Country" />
+
+    <label>City </label>
+    <input type="text" value="@Model.City" />
+</form>

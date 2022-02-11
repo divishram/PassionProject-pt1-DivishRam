@@ -1,0 +1,34 @@
+@model BlogProject.Models.Article
+
+@{
+    ViewBag.Title = "Update";
+}
+
+
+<header>
+    <a href="/Article/Show/@Model.Id">Go Back</a>
+</header>
+
+<h3>Update Article</h3>
+
+<form action="/Article/Update/@Model.Id" method="post" onsubmit="return ValidateGameArticle()">
+
+    <label>Review Title: </label>
+    <input type="text" value="@Model.Title" />
+
+    <label>Rating</label>
+    <input type="text" value="@Model.Rating" />
+
+    <label>Release Year: </label>
+    <input type="text" value="@Model.ReleaseYear" />
+
+    <label>Genre: </label>
+    <input type="text" value="@Model.Genre" />
+
+    <label>Publisher Name: </label>
+    <input type="text" value="@Model.PublisherName" />
+
+    <label>Summary: </label>
+    <textarea>@Model.Summary</textarea>
+
+</form>

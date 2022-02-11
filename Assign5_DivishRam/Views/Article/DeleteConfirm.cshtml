@@ -1,0 +1,19 @@
+@model BlogProject.Models.Article
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+
+<header>
+    <a href="/Article/Show/@Model.Id">Cancel</a>
+    <h2>Confirm delete…</h2>
+    <p>Unable to reverse this action</p>
+
+    <form action="/Article/Delete/@Model.Id" method="post">
+
+        <button>Delete Article</button>
+
+    </form>
+
+</header>

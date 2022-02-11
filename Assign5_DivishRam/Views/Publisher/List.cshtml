@@ -1,0 +1,26 @@
+@model IEnumerable<BlogProject.Models.Publishers>
+@{
+    ViewBag.Title = "List";
+}
+
+<h1> List of Game Publishers!</h1>
+
+<header>
+    <a href="/Publisher/List">Create new publisher</a>
+
+    <h3>List of publishers</h3>
+
+    <form action="/Publisher/List" method="get">
+
+        <input type="text" name="SearchKey" autocomplete="off" placeholder="Insomnaic Games" />
+        <input type="submit" name="button" value="Search" />
+
+
+    </form>
+
+    @foreach (var Publishers in Model)
+    {
+    <a href="/Publishers/Show/@Publishers.Id">@Publishers.Founder</a>
+    }
+
+</header>

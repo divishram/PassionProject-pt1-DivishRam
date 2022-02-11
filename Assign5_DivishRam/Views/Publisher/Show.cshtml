@@ -1,0 +1,26 @@
+@model BlogProject.Models.Publishers
+
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<header>
+    <a href="/Publishers/List">Return to List of Publishers</a>
+
+    <a href="/Publishers/DeleteConfirm/@Model.Id">Delete the Publisher</a>
+
+    <a href="/Publishers/Update/@Model.Id">Update any Publisher</a>
+
+</header>
+
+
+<h2>
+    @Model.Title
+</h2>
+
+<!--Info about publisher-->
+<p>Rating: @Model.PublisherName</p>
+<p>Releasy Year: @Model.Founder</p>
+<p>Genre: @Model.Country</p>
+<p>Publisher Name: @Model.City</p>

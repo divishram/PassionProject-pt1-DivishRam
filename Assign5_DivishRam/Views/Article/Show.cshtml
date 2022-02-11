@@ -1,0 +1,27 @@
+@model BlogProject.Models.Article
+
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<header>
+    <a href="/Article/List">Return to List of Game Articles</a>
+
+    <a href="/Article/DeleteConfirm/@Model.Id">Delete the Article</a>
+
+    <a href="/Article/Update/@Model.Id">Update any Article</a>
+
+</header>
+
+<!-- Game article title-->
+<h2>
+    @Model.Title
+</h2>
+
+<!--Info about game-->
+<p>Rating: @Model.Rating</p>
+<p>Releasy Year: @Model.ReleaseYear</p>
+<p>Genre: @Model.Genre</p>
+<p>Publisher Name: @Model.PublisherName</p>
+<p>Synopsis: @Model.Summary</p>

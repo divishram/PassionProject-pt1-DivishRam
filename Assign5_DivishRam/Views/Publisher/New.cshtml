@@ -1,0 +1,27 @@
+@{
+    ViewBag.Title = "New";
+}
+
+<header>
+    <a href="/Publishers/List">Back to game reviews</a>
+</header>
+
+<h2>Create Publisher</h2>
+
+<form action="/Publishers/Create" method="post" onsubmit="return ValidatePublisher()">
+
+    <label>Publisher name: </label>
+    <input type="text" />
+
+
+    <label>Founder: </label>
+    <input type="text" />
+
+    <label>Country </label>
+    <input type="text" />
+
+    <label>City: </label>
+    <input type="text" />
+</form>
+
+

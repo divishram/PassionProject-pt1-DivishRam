@@ -1,0 +1,34 @@
+@{
+    ViewBag.Title = "New";
+}
+
+<header>
+    <a href="/Article/List">Back to game reviews</a>
+</header>
+
+<h2>Create New Review</h2>
+
+<form action="/Article/Create" method="post" onsubmit="return ValidateGameArticle()">
+
+    <label>Article Title: </label>
+    <input type="text" />
+
+
+    <label>Article Rating: </label>
+    <input type="text" />
+
+    <label>Release Year: </label>
+    <input type="text" />
+
+    <label>Genre: </label>
+    <input type="text" />
+
+    <label>Publisher Name:  </label>
+    <input type="text" />
+
+    <label>Summary </label>
+    <textarea></textarea>
+
+</form>
+
+
